@@ -1,0 +1,97 @@
+---
+import { Picture } from "@astrojs/image/components";
+import { Icon } from "astro-icon";
+import Wave from "./Wave.astro";
+---
+
+<div class="h-[80vh] bg-indigo-600 relative pt-32 overflow-hidden">
+  <div class="text-white h-full max-w-[110rem] mx-auto px-10 grid grid-cols-2">
+    <div class="">
+      <h1 class="text-6xl font-bold mb-7">
+        Quality Medical <br /> Services You Can<br /> Trust
+      </h1>
+      <p class="text-lg max-w-xl text-gray-300">
+        At CareFirst, we understand that every patient is unique, and we take
+        the time to listen to your concerns and provide personalized care that
+        is tailored to your specific needs. Our goal is to ensure that you
+        receive the best possible care in a comfortable and caring environment.
+      </p>
+      <button
+        class="mt-10 bg-teal-500 px-10 py-2 rounded-md hover:bg-teal-600 duration-300"
+        >Get Service</button
+      >
+    </div>
+
+    <div class="relative">
+      <!-- <Picture
+        alt="hero section image"
+        src="/doctor.png"
+        widths={[300, 600]}
+        sizes="(max-width:400px) 400px,  600px"
+        aspectRatio="5:3"
+        class="rounded-lg h-full object-cover"
+      /> -->
+      <div
+        class="absolute bg-white shadow-lg rounded-md overflow-hidden flex ounded-md animate-bounce"
+      >
+        <div class="bg-red-400 p-2">
+          <Icon name="device-heart" class="h-full w-14" />
+        </div>
+        <div class="text-slate-800 p-2">
+          <h5 class="text-sm font-medium">Health Care</h5>
+          <p class="text-[12px] text-gray-500 mt-1">
+            Advanced Medical Care for a Better Life
+          </p>
+        </div>
+      </div>
+
+      <div class="absolute top-40">
+        <Icon name="capsule" class="h-full w-14" />
+      </div>
+      <img
+        src="/doctor.png"
+        alt=""
+        class="w-full h-full object-cover absolute -top-14 z-10"
+      />
+      <div class="absolute right-24 w-96 h-96 bg-indigo-700 rounded-full"></div>
+    </div>
+  </div>
+
+  <div class="custom-shape-divider-bottom-1679158570 fill-blue-50 z-20">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+  <!-- <Wave /> -->
+</div>
+
+<style>
+  .custom-shape-divider-bottom-1679158570 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1679158570 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 154px;
+    transform: rotateY(180deg);
+  }
+
+  .custom-shape-divider-bottom-1679158570 .shape-fill {
+    /* fill: #ffffff; */
+  }
+</style>
